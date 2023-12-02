@@ -1,0 +1,142 @@
+html {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  height: 100%;
+  margin: 0;
+  color: white;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background-color: black;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+body .container {
+  background-color: transparent;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  box-shadow: -3px -3px 7px rgba(225, 225, 225, 0.5), 3px 3px 7px rgba(255, 255, 255, 0.5);
+}
+body .container h1,
+body .container h5,
+body .container p {
+  margin: 0;
+}
+body .container .input-container {
+  display: flex;
+  flex-direction: row;
+}
+body .container .input-container label {
+  background-color: transparent;
+  margin-right: 10px;
+  min-width: 51px;
+  max-width: 51px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+body .container .input-container input[type=number] {
+  border: none;
+  border-bottom: none;
+  background-color: #E5E4E2;
+  width: 100%;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-inline: 10px;
+}
+body .container .input-container input[type=number]:focus {
+  outline: none;
+}
+body .container button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(156, 155, 155);
+  transition: all 0.2s ease-in-out;
+}
+body .container button.active::before {
+  animation: clickAnim 0.5s ease-in-out;
+}
+body .container button::before {
+  box-shadow: 3px 3px 7px rgba(225, 225, 225, 0.5);
+  content: "Calculate";
+  position: absolute;
+  transform: translate(-17px, -7px);
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  background-color: white;
+}
+body .container button:hover {
+  scale: 1.05;
+}
+@keyframes clickAnim {
+  0% {
+    transform: translate(-17px, -7px);
+  }
+  50% {
+    transform: translate(-20px, -9.5px);
+  }
+  100% {
+    transform: translate(-17px, -7px);
+  }
+}
+body .container #result {
+  background-color: #E5E4E2;
+  width: 90%;
+  height: 60px;
+  padding: 10px 5px;
+  border-radius: 10px;
+  color: black;
+  font-size: 20px;
+  box-shadow: inset -3px -3px 7px rgba(0, 0, 0, 0.5), inset 3px 3px 7px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-inline-start: 20px;
+}
+body .container #result p {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body .container #result p span {
+  text-decoration: underline;
+  font-weight: 500;
+}
+body .container #popup {
+  display: none;
+  position: absolute;
+  width: 300px;
+  height: 100px;
+  background-color: #E5E4E2;
+  border-radius: 20px;
+  color: black;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+  animation: none;
+}
+@keyframes popupAnim {
+  0% {
+    transform: rotate(0deg);
+    scale: 0;
+  }
+  100% {
+    transform: rotate(360deg);
+    scale: 1;
+  }
+}/*# sourceMappingURL=style.css.map */
